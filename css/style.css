@@ -1,0 +1,153 @@
+/* style.css */
+
+/* 공통 스타일 */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #fff0f5, #fce4ec);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #d81b60;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d81b60;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    padding: 1rem 0;
+    background-color: #fff0f5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Map */
+#map {
+    text-align: center;
+    padding: 1rem;
+}
+
+#world-map {
+    max-width: 90%;
+    border: 2px solid #d81b60;
+    border-radius: 12px;
+    cursor: crosshair;
+}
+
+.map-tip {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+/* Letter */
+#letter {
+    background: #fffaf0;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border: 2px dashed #f8bbd0;
+    border-radius: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.8;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.letter-paper {
+    white-space: pre-wrap;
+}
+
+/* Music Toggle */
+#music-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    border: 2px solid #d81b60;
+    border-radius: 50%;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+#music-toggle:hover {
+    background-color: #f8bbd0;
+}

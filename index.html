@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Olive ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+<audio id="bg-music" loop autoplay>
+    <source src="your-music.mp3" type="audio/mpeg">
+</audio>
+<button id="music-toggle">🔊</button>
+
+<header id="home">
+    <h1>For Olive ❤️</h1>
+    <nav>
+        <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#map">Map</a></li>
+            <li><a href="#letter">Letter</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+        <!-- Sample Image -->
+        <img src="img1.jpg" alt="Memory 1" class="gallery-img" />
+        <img src="img2.jpg" alt="Memory 2" class="gallery-img" />
+        <!-- Add more as needed -->
+    </div>
+    <div id="img-modal" class="modal hidden">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img" />
+    </div>
+</section>
+
+<section id="map">
+    <h2>Map</h2>
+    <canvas id="world-map" width="1000" height="600"></canvas>
+    <p class="map-tip">Click on countries to color them 💖</p>
+</section>
+
+<section id="letter">
+    <h2>Letter</h2>
+    <div class="letter-paper">
+        <p>Dear Olive,</p>
+        <p>[편지를 여기에 작성하세요...]</p>
+        <p>With love,<br />Your ❤️</p>
+    </div>
+</section>
+</body>
+</html>
