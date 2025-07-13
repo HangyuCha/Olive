@@ -152,15 +152,26 @@
             const modal = document.getElementById("img-modal");
             const img = document.getElementById("modal-img");
             img.src = src;
+
+            modal.classList.remove("hidden");
             modal.style.display = "flex";
-            document.body.style.overflow = "hidden"; // 스크롤 막기
+
+            // ✅ 더 이상 body 스크롤을 막지 않음
+            // ✅ 대신 자동으로 해당 이미지로 이동
+            setTimeout(() => {
+                modal.scrollIntoView({ behavior: "auto", block: "center" });
+            }, 50);
         }
 
         function closeModal() {
             const modal = document.getElementById("img-modal");
+            modal.classList.add("hidden");
             modal.style.display = "none";
-            document.body.style.overflow = ""; // 스크롤 복원
+
+            // ✅ 필요 없다면 overflow 복원도 제거 가능
+            // document.body.style.overflow = "auto";
         }
+
     </script>
 
 

@@ -19,16 +19,16 @@ const modal = document.getElementById("img-modal");
 const modalImg = document.getElementById("modal-img");
 const closeBtn = document.querySelector(".close");
 
-// 동적으로 1~40번 이미지 클릭 이벤트 등록
-for (let i = 1; i <= 40; i++) {
-    const img = document.querySelector(`.gallery-img[data-index="${i}"]`);
-    if (img) {
-        img.addEventListener("click", () => {
-            modal.classList.remove("hidden");
-            modalImg.src = img.src;
-        });
-    }
-}
+// // 동적으로 1~40번 이미지 클릭 이벤트 등록
+// for (let i = 1; i <= 40; i++) {
+//     const img = document.querySelector(`.gallery-img[data-index="${i}"]`);
+//     if (img) {
+//         img.addEventListener("click", () => {
+//             modal.classList.remove("hidden");
+//             modalImg.src = img.src;
+//         });
+//     }
+// }
 
 closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
@@ -86,11 +86,19 @@ function updateDaysCount() {
 
 updateDaysCount();
 
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.body.classList.add("loaded");
-    }, 2000); // 2000ms = 2초 동안 로딩 화면 유지
+
+window.addEventListener("load", function () {
+    // 로딩창 숨기기
+    const loader = document.getElementById("loader");
+    if (loader) loader.classList.add("hidden");
+
+    // body에 'loaded' 클래스 추가하여 로딩 애니메이션 종료 스타일 적용
+    document.body.classList.add("loaded");
+
+    // 페이지 맨 위로 이동
+    window.scrollTo({ top: 0, behavior: "auto" });
 });
+
 
 
 
