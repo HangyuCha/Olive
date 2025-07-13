@@ -86,4 +86,12 @@ function updateDaysCount() {
 
 updateDaysCount();
 
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.body.classList.add("loaded");
+    }, 2000); // 2000ms = 2초 동안 로딩 화면 유지
+});
+
+
+
 
