@@ -141,7 +141,7 @@
             const modal = document.getElementById("img-modal");
             document.getElementById("modal-img").src = src;
             modal.classList.remove("hidden");
-            window.scrollTo({ top: 0, behavior: "smooth" }); // 상단 이동
+            //window.scrollTo({ top: 0, behavior: "smooth" }); // 상단 이동
         }
         function closeModal() {
             document.getElementById("img-modal").classList.add("hidden");
@@ -195,6 +195,17 @@
         }
     }
 </script>
+
+
+<script>
+    window.addEventListener('load', function () {
+        const ddaySection = document.getElementById('days-counter');
+        if (ddaySection) {
+            ddaySection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+</script>
+
 
 </body>
 </html>
