@@ -214,23 +214,17 @@
 
 <script>
     window.addEventListener("load", function () {
-        const loader = document.getElementById("loader");
-        const mainContent = document.querySelector("body");
+        // 로딩 애니메이션 제거
+        document.body.classList.add("loaded");
 
-        setTimeout(() => {
-            loader.style.opacity = "0";
-            loader.style.transition = "opacity 0.5s ease";
-            setTimeout(() => {
-                loader.style.display = "none";
-                // ✅ 여기서 days-counter 섹션으로 스크롤 이동
-                const ddaySection = document.getElementById("days-counter");
-                if (ddaySection) {
-                    ddaySection.scrollIntoView({ behavior: "smooth" });
-                }
-            }, 500); // fade-out 완료 후 실행
-        }, 2500); // 로딩 지속 시간
+        // 페이지 최상단으로 스크롤 이동
+        window.scrollTo({ top: 0, behavior: "auto" });
+
+        // D-day나 다른 자동 스크롤 기능이 있다면 제거 또는 주석 처리
+        // document.getElementById('days-counter')?.scrollIntoView({ behavior: 'smooth' });
     });
 </script>
+
 
 
 </body>
