@@ -191,6 +191,15 @@ header {
 #music-toggle:hover {
     background-color: #f8bbd0;
 }
+
+/* 점선 구분선 스타일 */
+.section-divider {
+    border: none;
+    border-top: 2px dashed #d81b60;
+    margin: 3rem auto;
+    width: 80%;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 1.8rem;

@@ -38,7 +38,7 @@ closeBtn.addEventListener("click", () => {
 const canvas = document.getElementById("world-map");
 const ctx = canvas.getContext("2d");
 const mapImg = new Image();
-mapImg.src = "image/world-map.png"; // 실제 경로에 맞게 수정
+mapImg.src = "image/map.png"; // 실제 경로에 맞게 수정
 
 mapImg.onload = () => {
     ctx.drawImage(mapImg, 0, 0, canvas.width, canvas.height);
@@ -56,6 +56,8 @@ canvas.addEventListener("click", (e) => {
     ctx.fill();
 });
 
+
+
 // Scroll-triggered section fade-in 애니메이션
 const sections = document.querySelectorAll("section");
 
@@ -70,3 +72,18 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => observer.observe(section));
+
+// 날짜 카운트업 기능
+const counterElement = document.getElementById("counter-days");
+const startDate = new Date("2024-12-27"); // 만난 날을 여기에 입력!
+
+function updateDaysCount() {
+    const today = new Date();
+    const diffTime = today - startDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    counterElement.textContent = `${diffDays}일째 함께하고 있어요 💕`;
+}
+
+updateDaysCount();
+
+

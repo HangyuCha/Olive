@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Olive ❤️</title>
+    <title>For 경빈 ❤️</title>
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="script/script.js"></script>
 </head>
 <body>
 <audio id="bg-music" loop autoplay>
-    <source src="music/your-music.mp3" type="audio/mpeg">
+    <source src="music/love.mp3" type="audio/mpeg" />
 </audio>
 <button id="music-toggle">🔊</button>
 
 <header id="home">
-    <h1>For Olive ❤️</h1>
+    <h1>For 경빈 ❤️</h1>
     <nav>
         <ul>
             <li><a href="#gallery">Gallery</a></li>
@@ -23,6 +23,23 @@
         </ul>
     </nav>
 </header>
+
+<hr class="section-divider" />
+
+<section id="home-section" style="text-align: center;">
+    <h1>If I know what love is, it is because of you.</h1>
+    <div class="home-image">
+        <img src="image/p41.heic" alt="Our Memory"
+             style="max-width: 300px; width: 80%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: block; margin: 0 auto;" />
+    </div>
+    <div id="days-counter" style="text-align: center;">
+        <h2>💖 우리가 함께한지</h2>
+        <p id="counter-days">...일째</p>
+    </div>
+</section>
+
+<hr class="section-divider" />
+
 
 <section id="gallery">
     <h2>Gallery</h2>
@@ -78,11 +95,15 @@
 
 </section>
 
+<hr class="section-divider" />
+
 <section id="map">
     <h2>Map</h2>
     <canvas id="world-map" width="1000" height="600"></canvas>
-    <p class="map-tip">Click on countries to color them 💖</p>
+    <p class="map-tip"> 아직 못가본 모든 나라들 함께 가보자 💖</p>
 </section>
+
+<hr class="section-divider" />
 
 <section id="letter">
     <h2>Letter</h2>
