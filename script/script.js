@@ -18,14 +18,17 @@ musicToggle.addEventListener("click", () => {
 const modal = document.getElementById("img-modal");
 const modalImg = document.getElementById("modal-img");
 const closeBtn = document.querySelector(".close");
-const images = document.querySelectorAll(".gallery-img");
 
-images.forEach((img) => {
-    img.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        modalImg.src = img.src;
-    });
-});
+// 동적으로 1~40번 이미지 클릭 이벤트 등록
+for (let i = 1; i <= 40; i++) {
+    const img = document.querySelector(`.gallery-img[data-index="${i}"]`);
+    if (img) {
+        img.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+            modalImg.src = img.src;
+        });
+    }
+}
 
 closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
@@ -34,11 +37,11 @@ closeBtn.addEventListener("click", () => {
 // 지도 색칠 기능
 const canvas = document.getElementById("world-map");
 const ctx = canvas.getContext("2d");
-const img = new Image();
-img.src = "image/world-map.png"; // 실제 경로에 맞게 수정
+const mapImg = new Image();
+mapImg.src = "image/world-map.png"; // 실제 경로에 맞게 수정
 
-img.onload = () => {
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+mapImg.onload = () => {
+    ctx.drawImage(mapImg, 0, 0, canvas.width, canvas.height);
 };
 
 canvas.addEventListener("click", (e) => {
