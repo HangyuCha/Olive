@@ -185,3 +185,35 @@ header {
 #music-toggle:hover {
     background-color: #f8bbd0;
 }
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #world-map {
+        width: 100%;
+        height: auto;
+    }
+
+    #letter {
+        padding: 1rem;
+        margin: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.5rem;
+    }
+
+    #music-toggle {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        font-size: 1rem;
+    }
+}
