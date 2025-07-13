@@ -80,7 +80,7 @@ const startDate = new Date("2024-12-27"); // 만난 날을 여기에 입력!
 function updateDaysCount() {
     const today = new Date();
     const diffTime = today - startDate;
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24))+1;
     counterElement.textContent = `${diffDays}일째 함께하고 있어요 💕`;
 }
 
